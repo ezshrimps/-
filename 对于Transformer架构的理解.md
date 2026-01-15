@@ -1,4 +1,5 @@
-![image.png](attachment:cd608e4d-8b24-492f-8071-bda91af080e3:image.png)
+
+<img width="1141" height="1200" alt="image" src="https://github.com/user-attachments/assets/591c0a0d-c4e3-4fcb-b0a8-af37ff7a4d50" />
 
 网络上有太多对Attention is All You Need这篇论文的nb讲解了，我基本也是参照着这些导读文章和视频才摸明白的（为什么学校AI课还在教老东西啊。。。CS171 CS178说的就是你俩）我写这篇是主要是为了遵循费曼学习法写来玩的！
 
@@ -12,7 +13,8 @@
 
 我们由此得到下面著名的attention公式。
 
-![image.png](attachment:6cf9946e-87c1-445b-b172-5d02fe588396:image.png)
+<img width="379" height="80" alt="image1" src="https://github.com/user-attachments/assets/3e0c10a5-32a7-42e8-972d-a861668631c6" />
+
 
 我们可以更直观的总结成这句话：
 
@@ -57,11 +59,8 @@ Multi-Headed Self-Attention这一步的最终结果就是模型为每个token都
 
 得到了这个计算出的向量之后，由linear层做一次softmax，把这个向量得到的所有可能性都变成一个概率分布，最后选出概率最高的token，也就是”今天“这个词（当然模型也有可能觉得今天开头太老土了，于是他就用”你好“来开头，这一切都取决于哪个的概率分布高）这样的过程循环往复，直到他认为应该要输出<end>为止。
 
-![image.png](attachment:c43066bb-144d-44aa-9d65-bf23252dd5b2:image.png)
-
 那么训练模型具体是在训练什么呢？
 TODO：2025.1.15 写到这里
 
 Q, K, V分别都是模型在训练过程中反复调整的矩阵。
 
-![image.png](attachment:b7557413-0d53-41b6-8022-0de8a643a026:image.png)
